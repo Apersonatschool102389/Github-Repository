@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="javascript" href="js/script.js">
+    <link rel = "images">
 </head>
 <body>
+    <h2>Projects</h2>
     <div class="nav">
         <ul>
             <li><a href="about.html">Return</a></li>
+            <li><a href="index.html">index</a></li>
+            <li><a href="journal.html">journal</a></li>
+            <li><a href="ai_log.html">ai log</a></li>
         </ul>
     </div>
+    <div class="nav">
+        <ul>
+            <li><button onclick="filterProjects('all')">all</button></li>
+            <li><button onclick="filterProjects('javascript')">javascript</button></li>
+            <li><button onclick="filterProjects('web')">web</button></li>
+            <li><button onclick="filterProjects('other')">other</button></li>
+        </ul>
+    </div>
+    <div class="cards" id = "jsc">
+        <section class="card1">
+        <h4>Developer Engineering Notebook</h4>
+        <p>A homepage of sorts to show a portfolio and resume.</p>
+        <img class="projimg1" src="images/Devengineeringnotebookimage.png">
+        
+        <a href="https://github.com/Apersonatschool102389/Github-Repository/tree/main/developer%20engineering%20notebook">Link</a>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

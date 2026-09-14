@@ -27,12 +27,24 @@
         margin: 10px;
     }
     .nav {
-        background-color: #333;
+        background-color: #fff;
         overflow: hidden;
     }
     .nav a {
         float: left;
         color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .filter {
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .filter button {
+        float: left;
+        color: #000;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -107,9 +119,8 @@
     background-color: black;
     overflow: hidden;
 }
-.nav button {
+.nav-link{
         float: left;
-        background-color: black;
         color: #f2f2f2;
         text-align: center;
         padding: 14px 16px;
@@ -122,9 +133,17 @@
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
     gap: 20px;
-    max-width: 1000px;
+    max-width: 40%;
     margin: 0 auto;
     padding: 20px;
+}
+.hidden {
+    display: none;
+}
+.extended {
+    display: none;
+}
+.extend-button p {
+    color: "yellow";
 }

@@ -33,27 +33,72 @@ function modeSwitch(){
 window.addEventListener('DOMContentLoaded', () => {
     document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
     document.body.style.color = localStorage.getItem('color');
+    if (document.getElementById("main") != undefined) {
     document.getElementById("main").style.backgroundColor = localStorage.getItem('main');
-    if (localStorage.getItem('color') == "white") {
-    document.getElementsByClassName('nav')[0].style.backgroundColor = "black";
-    for (let i = 0; i < 4; i++) {
-        document.getElementsByClassName('nav-link')[i].style.color = "white";
     }
-    } else {
-        document.getElementsByClassName('nav')[0].style.backgroundColor = "white";
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName('nav-link')[i].style.color = "black";
+    if (localStorage.getItem('backgroundColor') == "black") {
+    for (let i = 0; i < 4; i++) {
+        document.getElementsByClassName('nav')[0].style.backgroundColor = "black";
+        document.getElementsByClassName('nav-link')[i].style.color = "white";
+        if (document.getElementsByClassName('filter')[0] != undefined) {
+            document.getElementsByClassName('filter')[0].style.backgroundColor = "black";
+            document.getElementsByClassName('filter-button')[i].style.color = "white";
         }
     }
-})
-function filterProjects(type) {
-    if (document.getElementById(type) == 'jsc') {
-
-    } else if (document.getElementById(type) == 'other') {
-
-    } else if (document.getElementById(type) == 'web') {
-
     } else {
-            
+        for (let i = 0; i < 4; i++) {
+            document.getElementsByClassName('nav-link')[i].style.color = "black";
+            document.getElementsByClassName('nav')[0].style.backgroundColor = "white";
+            if (document.getElementsByClassName('filter')[0] != undefined) {
+                document.getElementsByClassName('filter-button')[i].style.color = "black";
+                document.getElementsByClassName('filter')[0].style.backgroundColor = "white";
+        }
+    }
+}})
+function filterProjects(type) {
+    const hiddenProjects = document.getElementsByClassName('hidden');
+    const javascriptProjects = document.getElementsByClassName('jsc');
+    const otherProjects = document.getElementsByClassName('other');
+    const webProjects = document.getElementsByClassName('web');
+    if (type == 'jsc') {
+        for (const element of javascriptProjects) {
+            element.classList.remove('hidden');
+        }
+        for (const element of otherProjects) {
+            element.classList.add('hidden');
+        }
+        for (const element of webProjects) {
+            element.classList.add('hidden');
+        }
+    } else if (type == 'other') {
+        for (const element of otherProjects) {
+            element.classList.remove('hidden');
+        }
+        for (const element of javascriptProjects) {
+            element.classList.add('hidden');
+        }
+        for (const element of webProjects) {
+            element.classList.add('hidden');
+        }
+    } else if (type == 'web') {
+        for (const element of webProjects) {
+            element.classList.remove('hidden');
+        }
+        for (const element of javascriptProjects) {
+            element.classList.add('hidden');
+        }
+        for (const element of otherProjects) {
+            element.classList.add('hidden');
+        }
+    } else {
+        for (const element of hiddenProjects) {
+            element.classList.remove('hidden');
+        }
+    }
+}
+function extend(id) {
+    const project = document.getElementById(id);
+    if (project) {
+        project.classList.toggle('extended');
     }
 }

@@ -12,28 +12,35 @@
     <h2>Projects</h2>
     <div class="nav">
         <ul>
-            <li><a href="about.html">Return</a></li>
-            <li><a href="index.html">index</a></li>
-            <li><a href="journal.html">journal</a></li>
-            <li><a href="ai_log.html">ai log</a></li>
+            <li ><a class="nav-link" href="about.html">Return</a></li>
+            <li ><a class="nav-link" href="index.html">index</a></li>
+            <li ><a class="nav-link" href="journal.html">journal</a></li>
+            <li ><a class="nav-link" href="ai_log.html">ai log</a></li>
         </ul>
     </div>
-    <div class="nav">
+    <div class="filter">
         <ul>
-            <li><button onclick="filterProjects('all')">all</button></li>
-            <li><button onclick="filterProjects('javascript')">javascript</button></li>
-            <li><button onclick="filterProjects('web')">web</button></li>
-            <li><button onclick="filterProjects('other')">other</button></li>
+            <li class = 'filter-button'><button onclick="filterProjects('all')">all</button></li>
+            <li class = 'filter-button'><button onclick="filterProjects('jsc')">javascript</button></li>
+            <li class = 'filter-button'><button onclick="filterProjects('web')">web</button></li>
+            <li class = 'filter-button'><button onclick="filterProjects('other')">other</button></li>
         </ul>
     </div>
-    <div class="cards" id = "jsc">
-        <section class="card1">
+    <div class="cards">
+        <div class="web">
         <h4>Developer Engineering Notebook</h4>
         <p>A homepage of sorts to show a portfolio and resume.</p>
         <img class="projimg1" src="images/Devengineeringnotebookimage.png">
         
-        <a href="https://github.com/Apersonatschool102389/Github-Repository/tree/main/developer%20engineering%20notebook">Link</a>
-        </section>
+        <a href="https://apersonatschool102389.github.io/Github-Repository/">Link</a>
+        <p>Technology used: google, 1 ai prompt.</p>
+        <p onClick="extend('DEN')" class="extend-button">click to extend</p>
+        <p class="extended" id="DEN">hi</p>
+        </div>
+        <div class="web">
+        </div>
+        <div class="other">
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

@@ -96,3 +96,5 @@ Response:
     min-height: 150px;
 }
 All of this got edited to my choosing and I will probably edit this more later. The only thing within it I didn't understand initially within the code is grids, but I learnt that on my own afterwards.
+Unfortunately I forgot to record the second major interaction.
+It was something along the lines of "getElementsByClass is not compatable with the element sorter you are using" and I changed it to what it is now.

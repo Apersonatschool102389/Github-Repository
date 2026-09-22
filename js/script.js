@@ -36,6 +36,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById("main") != undefined) {
     document.getElementById("main").style.backgroundColor = localStorage.getItem('main');
     }
+    if (document.getElementById("skills") != undefined) {
+    document.getElementById("skills").style.backgroundColor = localStorage.getItem('skills');
+    }
     if (localStorage.getItem('backgroundColor') == "black") {
     for (let i = 0; i < 4; i++) {
         document.getElementsByClassName('nav')[0].style.backgroundColor = "black";
@@ -100,5 +103,29 @@ function extend(id) {
     const project = document.getElementById(id);
     if (project) {
         project.classList.toggle('extended');
+    }
+}
+function random() {
+    const randomNumber = Math.random() * 4;
+    if (randomNumber < 1) {
+        filterProjects('jsc');
+    } else if (randomNumber < 2) {
+        filterProjects('other');
+    } else if (randomNumber < 3) {
+        filterProjects('web');
+    } else {
+        filterProjects('all');
+    }
+}
+function randomPage() {
+    const randomNumber = Math.random() * 4;
+    if (randomNumber < 1) {
+        window.location.href = "about.html";
+    } else if (randomNumber < 2) {
+        window.location.href = "projects.html";
+    } else if (randomNumber < 3) {
+        window.location.href = "ai_log.html";
+    } else {
+        window.location.href = "journal.html";
     }
 }

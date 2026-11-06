@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="javascript" href="javascript.js">
+</head>
+<body>
+    <h1>Sleep Scheduler</h1>
+    <p>Simply add a value for the start and end time.</p>
+    <form id="time-form">
+        <input type="time" id="start-time" name="start-time" required>
+        <input type="time" id="end-time" name="end-time" required>
+    </form>
+    <button id="submit" onclick="updateTable()">Submit </button>
+    <script src="javaScript/javascript.js"></script>
+    <style>
+        table {width: 100%; border-collapse: collapse; margin-top: 20px;}
+        th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
+        th {background-color: #f2f2f2;}
+    </style>
+    <table id="table-container">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Duration</th>
+                <th>Offset</th>
+                <th>Extra Hours Needed</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="javascript.js"></script>
+    <button id="clear" onclick="fullClear()">Clear All</button>
+</body>
+</html>
